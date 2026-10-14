@@ -1,0 +1,272 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5ef;
+    color: #252525;
+}
+
+header {
+    background-color: #142c2b;
+    color: white;
+    padding: 24px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    color: #e8c68a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+ 
+#inicio {
+    min-height: 650px;
+    padding: 120px 8%;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("imagenes/portada.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#inicio h1 {
+    font-size: 48px;
+    color: white;
+}
+
+#inicio p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+#inicio a {
+    display: inline-block;
+    background-color: #b58b50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#carta {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#carta h2 {
+    font-size: 36px;
+    color: #142c2b;
+}
+
+.platos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.plato {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plato img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.plato h3 {
+    color: #142c2b;
+    font-size: 22px;
+}
+
+.plato p {
+    padding: 0 15px;
+}
+
+.plato span {
+    color: #b58b50;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .platos {
+        grid-template-columns: 1fr;
+    }
+}
+
+#nosotros {
+    background-color: #142c2b;
+    color: white;
+    padding: 90px 15%;
+    text-align: center;
+}
+
+#nosotros h2 {
+    font-size: 36px;
+    color: #e8c68a;
+}
+
+#nosotros p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+#contacto {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #f8f5ef;
+}
+
+#contacto h2 {
+    font-size: 36px;
+    color: #142c2b;
+}
+
+#contacto p {
+    font-size: 19px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #142c2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    #inicio {
+        min-height: 500px;
+        padding: 100px 6%;
+    }
+
+    #inicio h1 {
+        font-size: 34px;
+    }
+
+    #carta,
+    #nosotros,
+    #contacto {
+        padding: 60px 6%;
+    }
+
+    #carta h2,
+    #nosotros h2,
+    #contacto h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    #inicio {
+        min-height: 500px;
+        padding: 100px 6%;
+    }
+
+    #inicio h1 {
+        font-size: 34px;
+    }
+
+    #carta,
+    #nosotros,
+    #contacto {
+        padding: 60px 6%;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+.plato {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+    .plato:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .plato {
+        transition: none;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a:focus-visible {
+    outline: 3px solid #e8c68a;
+    outline-offset: 4px;
+}
