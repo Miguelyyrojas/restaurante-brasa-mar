@@ -270,3 +270,229 @@ a:focus-visible {
     outline: 3px solid #e8c68a;
     outline-offset: 4px;
 }
+
+/* FORMULARIO DE RESERVAS */
+
+#mensaje-reserva {
+    max-width: 520px;
+    margin: 35px auto 0;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    text-align: left;
+}
+
+#mensaje-reserva h2 {
+    color: #142c2b;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+#formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formulario-reserva label {
+    color: #142c2b;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#formulario-reserva input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9d4cb;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #faf9f6;
+}
+
+#formulario-reserva input:focus {
+    outline: 2px solid #b58b50;
+    border-color: #b58b50;
+}
+
+#formulario-reserva button {
+    margin-top: 12px;
+    padding: 15px;
+    background-color: #142c2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-reserva button:hover {
+    background-color: #28514b;
+}
+
+#resultado-reserva {
+    color: #142c2b;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* BOTÓN PRINCIPAL DE RESERVA */
+
+#boton-reserva {
+    display: block;
+    margin: 25px auto 0;
+    padding: 15px 30px;
+    background-color: #b58b50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#boton-reserva:hover {
+    background-color: #96703c;
+}
+
+@media (max-width: 600px) {
+    #mensaje-reserva {
+        padding: 24px 18px;
+    }
+}
+#inicio #resultado-reserva {
+    color: #142c2b;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+#formulario-reserva input,
+#formulario-reserva select {
+    cursor: pointer;
+}
+
+#formulario-reserva select:focus {
+    outline: 2px solid #b58b50;
+    border-color: #b58b50;
+}
+
+/* FILTROS DE LA CARTA */
+
+.filtros-carta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.filtros-carta button {
+    background-color: transparent;
+    color: #173b35;
+    border: 2px solid #c9a45c;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtros-carta button:hover {
+    background-color: #173b35;
+    color: white;
+    border-color: #173b35;
+    transform: translateY(-2px);
+}
+
+.filtros-carta button.activo {
+    background-color: #173b35;
+    color: white;
+    border-color: #173b35;
+}
+
+/* MEJORAS DE LA CARTA */
+
+#lista-platos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+#lista-platos .plato {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#lista-platos .plato:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+#lista-platos .plato img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    #lista-platos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 0 15px;
+    }
+
+    #lista-platos .plato img {
+        height: 220px;
+    }
+}
+
+/* BUSCADOR DE LA CARTA */
+
+.buscador-carta {
+    max-width: 500px;
+    margin: 30px auto 15px;
+    padding: 0 15px;
+}
+
+#buscar-plato {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #c9a45c;
+    border-radius: 30px;
+    background-color: white;
+    color: #173b35;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#buscar-plato:focus {
+    border-color: #173b35;
+}
+
+/* MENSAJE CUANDO NO HAY RESULTADOS */
+
+#lista-platos .sin-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px 20px;
+    color: #173b35;
+    background-color: #ffffff;
+    border: 1px solid #e5d7b8;
+    border-radius: 15px;
+    font-size: 17px;
+    line-height: 1.6;
+}

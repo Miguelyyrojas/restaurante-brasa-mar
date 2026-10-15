@@ -25,36 +25,57 @@
             <h1>El auténtico sabor del Mediterráneo</h1>
             <p>Tradición, producto fresco y pasión por la cocina.</p>
             <a href="#carta">Descubre nuestra carta</a>
+            <button id="boton-reserva">Reservar una mesa</button>
+
+<div id="mensaje-reserva" hidden>
+    <h2>Solicita tu reserva</h2>
+
+    <form id="formulario-reserva">
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" min="1" max="12" required>
+
+<label for="hora">Hora de la reserva:</label>
+
+   <select id="hora" required>
+    <option value="">Selecciona una hora</option>
+</select>
+
+        <button type="submit">Consultar reserva</button>
+    </form>
+
+    <p id="resultado-reserva" role="status"></p>
+</div>
         </section>
 
 <section id="carta">
     <h2>Nuestra carta</h2>
     <p>Descubre algunos de nuestros platos.</p>
+    
+<div class="buscador-carta">
+    <input
+        type="search"
+        id="buscar-plato"
+        placeholder="Buscar un plato..."
+        aria-label="Buscar platos de la carta"
+    >
+</div>
 
-    <div class="platos">
+<div class="filtros-carta">
+    <button type="button" data-categoria="Todos">Todos</button>
+    <button type="button" data-categoria="Arroces">Arroces</button>
+    <button type="button" data-categoria="Mariscos">Mariscos</button>
+    <button type="button" data-categoria="Postres">Postres</button>
+</div>
 
-        <article class="plato">
-            <img src="imagenes/paella.jpg" alt="Paella marinera">
-            <h3>Paella marinera</h3>
-            <p>Arroz tradicional con marisco fresco.</p>
-            <span>22 €</span>
-        </article>
+    <div class="platos" id="lista-platos">
+</div>
 
-        <article class="plato">
-            <img src="imagenes/pulpo.jpg" alt="Pulpo a la brasa">
-            <h3>Pulpo a la brasa</h3>
-            <p>Pulpo con patatas y pimentón.</p>
-            <span>19 €</span>
-        </article>
-
-        <article class="plato">
-            <img src="imagenes/postre.jpg" alt="Crema catalana">
-            <h3>Crema catalana</h3>
-            <p>Postre tradicional con azúcar caramelizado.</p>
-            <span>7 €</span>
-        </article>
-
-    </div>
 </section>
 
 <section id="nosotros">
@@ -86,6 +107,8 @@
 <footer>
     <p>© 2026 Brasa & Mar. Todos los derechos reservados.</p>
 </footer>
+<script src="carta.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
