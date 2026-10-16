@@ -4,6 +4,7 @@ const mensajeReserva = document.querySelector("#mensaje-reserva");
 
 botonReserva.addEventListener("click", function() {
     mensajeReserva.hidden = !mensajeReserva.hidden;
+    botonReserva.setAttribute("aria-expanded", String(!mensajeReserva.hidden));
 
     if (!mensajeReserva.hidden) {
         mensajeReserva.scrollIntoView({
@@ -30,8 +31,6 @@ formulario.addEventListener("submit", function(evento) {
         String(hoy.getMonth() + 1).padStart(2, "0"),
         String(hoy.getDate()).padStart(2, "0")
     ].join("-");
-console.log("Fecha elegida:", fecha);
-console.log("Fecha actual:", fechaActual);
     if (fecha < fechaActual) {
         resultado.textContent = "No puedes seleccionar una fecha pasada.";
         return;
@@ -106,7 +105,7 @@ if (platosFiltrados.length === 0) {
         tarjeta.classList.add("plato");
 
         tarjeta.innerHTML = `
-            <img src="${plato.imagen}" alt="${plato.nombre}">
+            <img src="${plato.imagen}" alt="${plato.nombre}" loading="lazy" decoding="async" width="400" height="220">
             <h3>${plato.nombre}</h3>
             <p>${plato.descripcion}</p>
             
@@ -125,6 +124,7 @@ mostrarPlatos("Todos");
 
 const botonesFiltro = document.querySelectorAll(".filtros-carta button");
 botonesFiltro[0].classList.add("activo");
+botonesFiltro[0].setAttribute("aria-pressed", "true");
 
 botonesFiltro.forEach(function(boton) {
     boton.addEventListener("click", function() {
@@ -134,9 +134,11 @@ botonesFiltro.forEach(function(boton) {
 
         botonesFiltro.forEach(function(otroBoton) {
             otroBoton.classList.remove("activo");
+            otroBoton.setAttribute("aria-pressed", "false");
         });
 
         boton.classList.add("activo");
+        boton.setAttribute("aria-pressed", "true");
     });
 });
 
