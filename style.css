@@ -256,12 +256,6 @@ a:focus-visible {
     margin-top: 0;
 }
 
-#formulario-reserva {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
 #formulario-reserva label {
     color: #142c2b;
     font-weight: bold;
