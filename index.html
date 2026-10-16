@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasa & Mar | Restaurante Mediterráneo</title>
+    <title>Brasa & Mar | Carta mediterránea y reservas de demostración</title>
+    <meta name="description" content="Explora la carta mediterránea de Brasa & Mar: arroces, mariscos y postres. Proyecto web de demostración con formulario de reservas no operativo.">
+    <meta name="theme-color" content="#142c2b">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +39,7 @@
             Descubre nuestra carta
         </a>
 
-        <button id="boton-reserva" class="hero-btn hero-btn-secundario">
+        <button id="boton-reserva" type="button" class="hero-btn hero-btn-secundario" aria-controls="mensaje-reserva" aria-expanded="false">
             Reservar una mesa
         </button>
     </div>
@@ -92,14 +94,14 @@
     >
 </div>
 
-<div class="filtros-carta">
+<div class="filtros-carta" role="group" aria-label="Filtrar platos por categoría">
     <button type="button" data-categoria="Todos">Todos</button>
     <button type="button" data-categoria="Arroces">Arroces</button>
     <button type="button" data-categoria="Mariscos">Mariscos</button>
     <button type="button" data-categoria="Postres">Postres</button>
 </div>
 
-    <div class="platos" id="lista-platos">
+    <div class="platos" id="lista-platos" aria-live="polite" aria-relevant="additions text">
 </div>
 
 </section>
