@@ -21,31 +21,57 @@
     </header>
 
     <main>
-        <section id="inicio">
-            <h1>El auténtico sabor del Mediterráneo</h1>
-            <p>Tradición, producto fresco y pasión por la cocina.</p>
-            <a href="#carta">Descubre nuestra carta</a>
-            <button id="boton-reserva">Reservar una mesa</button>
+       <section id="inicio">
+<div class="hero-contenido">
+    <span class="hero-etiqueta">BRASA & MAR</span>
+
+    <h1>El auténtico sabor del Mediterráneo</h1>
+
+    <p>
+        Tradición, producto fresco y pasión por la cocina.
+        Descubre una experiencia gastronómica única.
+    </p>
+
+    <div class="hero-botones">
+        <a href="#carta" class="hero-btn hero-btn-principal">
+            Descubre nuestra carta
+        </a>
+
+        <button id="boton-reserva" class="hero-btn hero-btn-secundario">
+            Reservar una mesa
+        </button>
+    </div>
+</div>
 
 <div id="mensaje-reserva" hidden>
-    <h2>Solicita tu reserva</h2>
+    <div class="reserva-encabezado">
+    <h2>Reserva tu mesa</h2>
+    <p>Disfruta de una experiencia mediterránea especial.</p>
 
     <form id="formulario-reserva">
+        <p class="aviso-demo">
+    Formulario de demostración.
+    No se realizan reservas reales.
+</p>
+<div class="campo-reserva">
         <label for="nombre">Tu nombre:</label>
         <input type="text" id="nombre" required>
-
+</div>
+<div class="campo-reserva">
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" required>
-
+</div>
+<div class="campo-reserva">
         <label for="personas">Número de personas:</label>
         <input type="number" id="personas" min="1" max="12" required>
-
+</div>
+<div class="campo-reserva">
 <label for="hora">Hora de la reserva:</label>
 
    <select id="hora" required>
     <option value="">Selecciona una hora</option>
 </select>
-
+</div>
         <button type="submit">Consultar reserva</button>
     </form>
 

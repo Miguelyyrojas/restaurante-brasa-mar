@@ -496,3 +496,282 @@ a:focus-visible {
     font-size: 17px;
     line-height: 1.6;
 }
+.aviso-demo {
+    background-color: #fff4d6;
+    color: #654b16;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#formulario-reserva button[type="submit"] {
+    background-color: #b58b4a;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#formulario-reserva button[type="submit"]:hover {
+    background-color: #92703b;
+    transform: translateY(-2px);
+}
+.reserva-encabezado {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.reserva-encabezado h2 {
+    color: #142c2b;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.reserva-encabezado p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Mejoras del formulario de reservas */
+
+#mensaje-reserva {
+    height: auto;
+    min-height: 0;
+}
+
+#mensaje-reserva .reserva-encabezado {
+    margin-bottom: 20px;
+}
+
+#mensaje-reserva .reserva-encabezado p {
+    color: #555555;
+}
+
+#mensaje-reserva .aviso-demo {
+    background-color: #fff4d6;
+    color: #654b16;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* Organización de los campos de reserva */
+
+#formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formulario-reserva label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: #142c2b;
+}
+
+#formulario-reserva input,
+#formulario-reserva select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #d6d1c8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#formulario-reserva input:focus,
+#formulario-reserva select:focus {
+    outline: 2px solid #b58b4a;
+    outline-offset: 2px;
+}
+
+/* Campos adaptables de reserva */
+
+#formulario-reserva {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+#formulario-reserva .campo-reserva {
+    min-width: 0;
+}
+
+#formulario-reserva .aviso-demo,
+#formulario-reserva button[type="submit"] {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    #formulario-reserva {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Portada profesional */
+
+.hero-contenido {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero-etiqueta {
+    display: block;
+    color: #d6b477;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+#inicio .hero-contenido h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+#inicio .hero-contenido p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-btn-principal {
+    background: #b58b4a;
+    color: white;
+    border: 2px solid #b58b4a;
+}
+
+.hero-btn-secundario {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+@media (max-width: 600px) {
+    .hero-contenido {
+        padding: 45px 10px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Ajuste de los botones de portada */
+
+#inicio .hero-botones {
+    gap: 16px;
+}
+
+#inicio .hero-botones .hero-btn {
+    margin: 0;
+    width: auto;
+    min-width: 210px;
+    box-sizing: border-box;
+}
+
+#inicio .hero-botones #boton-reserva {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#inicio .hero-botones #boton-reserva:hover {
+    background: white;
+    color: #142c2b;
+}
+
+@media (max-width: 600px) {
+    #inicio .hero-botones .hero-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* Navegación principal */
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 6%;
+    background-color: #142c2b;
+}
+
+body > header h2 {
+    color: #d6b477;
+    font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+body > header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+body > header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+body > header nav a:hover {
+    color: #d6b477;
+}
+
+@media (max-width: 700px) {
+    body > header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    body > header nav {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+}
+

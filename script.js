@@ -4,7 +4,15 @@ const mensajeReserva = document.querySelector("#mensaje-reserva");
 
 botonReserva.addEventListener("click", function() {
     mensajeReserva.hidden = !mensajeReserva.hidden;
+
+    if (!mensajeReserva.hidden) {
+        mensajeReserva.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
 });
+
 const formulario = document.querySelector("#formulario-reserva");
 const resultado = document.querySelector("#resultado-reserva");
 
@@ -34,7 +42,9 @@ console.log("Fecha actual:", fechaActual);
         return;
     }
     resultado.textContent =
-    `Hola, ${nombre}. Has solicitado una mesa para ${personas} personas el día ${fecha} a las ${hora}. Esta es una demostración; tu reserva no se ha enviado.`;});
+    `Consulta de demostración para ${nombre}: ` +
+    `${personas} persona(s), el ${fecha} a las ${hora}. ` +
+    `Esta consulta no se ha enviado al restaurante ni confirma una reserva.`});
     const horarios = [
     "13:00",
     "13:30",
