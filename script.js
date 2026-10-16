@@ -86,7 +86,7 @@ const platosFiltrados = carta.filter(function(plato) {
 
     const coincideBusqueda = plato.nombre.toLowerCase().includes(textoBusqueda);
 
-    return coincideCategoria && coincideBusqueda;
+    return textoBusqueda ? coincideBusqueda : coincideCategoria;
 });
 
 if (platosFiltrados.length === 0) {
