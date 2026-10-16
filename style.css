@@ -205,40 +205,6 @@ footer p {
 
 }
 
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav a {
-        margin-left: 0;
-    }
-
-    #inicio {
-        min-height: 500px;
-        padding: 100px 6%;
-    }
-
-    #inicio h1 {
-        font-size: 34px;
-    }
-
-    #carta,
-    #nosotros,
-    #contacto {
-        padding: 60px 6%;
-    }
-}
 html {
     scroll-behavior: smooth;
 }
@@ -560,13 +526,7 @@ a:focus-visible {
     font-size: 14px;
     line-height: 1.5;
 }
-/* Organización de los campos de reserva */
-
-#formulario-reserva {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+/* Etiquetas y campos de reserva */
 
 #formulario-reserva label {
     display: block;
