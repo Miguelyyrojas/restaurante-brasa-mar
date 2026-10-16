@@ -620,9 +620,9 @@ a:focus-visible {
     transform: translateY(-3px);
 }
 
-.hero-btn-principal {
+#inicio a.hero-btn-principal {
     background: #b58b4a;
-    color: white;
+    color:  #102b26;
     border: 2px solid #b58b4a;
 }
 
