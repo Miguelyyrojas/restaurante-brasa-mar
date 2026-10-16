@@ -40,7 +40,7 @@ nav a {
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.55)
         ),
-        url("imagenes/portada.jpg");
+        url("imagenes/portada.webp");
 
     background-size: cover;
     background-position: center;
