@@ -4,7 +4,7 @@ const carta = [
         categoria: "Arroces",
         precio: 24,
         descripcion: "Arroz tradicional con marisco fresco.",
-        imagen: "imagenes/paella.jpg"
+        imagen: "imagenes/paella.webp"
     },
     {
         nombre: "Pulpo a la brasa",
