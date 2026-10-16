@@ -18,7 +18,7 @@ const carta = [
         categoria: "Postres",
         precio: 7,
         descripcion: "Postre tradicional con azúcar caramelizado.",
-        imagen: "imagenes/postre.jpg"
+        imagen: "imagenes/postre.webp"
     },
     {
         nombre: "Arroz negro con calamares",
